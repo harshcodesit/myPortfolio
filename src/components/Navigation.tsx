@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const sections = [
+  const sections = useMemo(() => [
     { id: 'hero', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'tech-stack', label: 'Tech Stack' },
     { id: 'projects', label: 'Projects' },
     { id: 'experience', label: 'Experience' },
     { id: 'contact', label: 'Contact' }
-  ];
+  ], []);
 
   useEffect(() => {
     const handleScroll = () => {

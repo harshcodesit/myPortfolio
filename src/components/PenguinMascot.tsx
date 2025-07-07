@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 const PenguinMascot: React.FC = () => {
   const [showSpeech, setShowSpeech] = useState(false);
   const [speechText, setSpeechText] = useState('Ready to Build!');
   const [isWaving, setIsWaving] = useState(true);
   
-  const speechOptions = [
+  const speechOptions = useMemo(() => [
     'Ready to Build!',
     'Let\'s Code!',
     'Hello World!',
@@ -14,7 +14,7 @@ const PenguinMascot: React.FC = () => {
     'Debug Mode!',
     'Git Push!',
     'npm install!'
-  ];
+  ], []);
 
   useEffect(() => {
     const speechInterval = setInterval(() => {
