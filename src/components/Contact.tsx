@@ -63,6 +63,7 @@ const Contact: React.FC = () => {
                       type="text"
                       id="name"
                       name="name"
+                      autoComplete="name"
                       value={formData.name}
                       onChange={handleInputChange}
                       onFocus={() => setFocusedField('name')}
@@ -88,6 +89,7 @@ const Contact: React.FC = () => {
                       type="email"
                       id="email"
                       name="email"
+                      autoComplete="email"
                       value={formData.email}
                       onChange={handleInputChange}
                       onFocus={() => setFocusedField('email')}
@@ -112,6 +114,7 @@ const Contact: React.FC = () => {
                     <textarea
                       id="message"
                       name="message"
+                      autoComplete="off"
                       value={formData.message}
                       onChange={handleInputChange}
                       onFocus={() => setFocusedField('message')}
