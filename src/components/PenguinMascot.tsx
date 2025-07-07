@@ -36,7 +36,7 @@ const PenguinMascot: React.FC = () => {
       clearInterval(speechInterval);
       clearInterval(autoSpeechInterval);
     };
-  }, [showSpeech]);
+  }, [showSpeech, speechOptions]);
 
   return (
     <div className="relative flex items-center justify-center h-full penguin-container">

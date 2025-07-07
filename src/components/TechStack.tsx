@@ -77,7 +77,7 @@ const TechStack: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {techGroups.map((group, index) => (
+          {techGroups.map((group) => (
             <div
               key={group.title}
               className={`bg-[#0C0C0C]/50 backdrop-blur-sm border border-[#6EACDA]/20 rounded-lg p-6 hover:border-[#6EACDA]/40 transition-all duration-300 card-hover animate-on-scroll`}
@@ -93,7 +93,7 @@ const TechStack: React.FC = () => {
               </div>
               
               <div className="space-y-4">
-                {group.technologies.map((tech, techIndex) => (
+                {group.technologies.map((tech) => (
                   <div
                     key={tech.name}
                     className="group cursor-pointer animate-on-scroll"
@@ -115,7 +115,6 @@ const TechStack: React.FC = () => {
                         className="h-full bg-gradient-to-r from-[#6EACDA] to-[#4A90E2] rounded-full transition-all duration-500 ease-out"
                         style={{ 
                           width: hoveredTech === tech.name ? `${tech.level}%` : '0%',
-                          animationDelay: `${techIndex * 100}ms`
                         }}
                       />
                     </div>
@@ -150,7 +149,7 @@ const TechStack: React.FC = () => {
             { number: '13+', label: 'Projects Built', symbol: '{}' },
             { number: '9+', label: 'Months Experience', symbol: '$' },
             { number: '100%', label: 'Passion', symbol: '♥' }
-          ].map((stat, index) => (
+          ].map((stat) => (
             <div key={stat.label} className="text-center group animate-on-scroll">
               <div className="text-2xl font-bold text-[#6EACDA] developer-font mb-1 group-hover:scale-110 transition-transform duration-300">
                 {stat.number}
