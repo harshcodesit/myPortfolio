@@ -3,7 +3,7 @@ import { Code2, Coffee, Lightbulb, Target } from 'lucide-react';
 
 const About: React.FC = () => {
   const stats = [
-    { icon: <Code2 size={32} />, value: '13+', label: 'Projects Completed' },
+    { icon: <Code2 size={32} />, value: '20+', label: 'Projects Completed' },
     { icon: <Coffee size={32} />, value: '1000+', label: 'Cups of Coffee' },
     { icon: <Lightbulb size={32} />, value: '9+', label: 'Months Experience' },
     { icon: <Target size={32} />, value: '100%', label: 'Dedication' }

@@ -6,7 +6,7 @@ const Projects: React.FC = () => {
     {
       title: 'syNAPse',
       description: 'A revolutionary dream-sharing MERN application where users can share their dreams and participate in community voting battles.',
-      image: 'https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.newscientist.com/wp-content/uploads/2024/07/15121713/SEI_212138415.jpg',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
       metrics: {
         code: '15+ Features',
@@ -19,24 +19,24 @@ const Projects: React.FC = () => {
       }
     },
     {
-      title: 'Virtual Campus Tour',
-      description: 'An immersive 360° campus navigation system built during a hackathon, providing virtual tours with interactive hotspots.',
-      image: 'https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'Express', 'Node.js', 'MongoDB', ],
+      title: 'Best India Tours',
+      description: 'BestIndiaTour.in offers curated tour packages and travel guides for exploring India’s top destinations. It makes planning your perfect trip easy and convenient.',
+      image: 'https://static.wixstatic.com/media/e47147_5af893ef49fb4ce7b8c936e54c70a1e2~mv2.jpg/v1/fill/w_1414,h_626,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/pexels-karthick-227261600-12041147.jpg',
+      technologies: ['React', 'Express', 'Node.js', 'MongoDB','WIX','Velo' ],
       metrics: {
         code: '8+ pages',
-        features: 'Hackathon',
+        features: 'Freelance',
         performance: '88% Score'
       },
       links: {
         github: 'https://github.com/harshcodesit/AIETM-Hackathon-2024',
-        live: '#'
+        live: 'https://www.bestindiatour.in/'
       }
     },
     {
       title: 'all-react-buttons',
       description: 'A comprehensive React button component library published to NPM, featuring 50+ customizable button styles and variants.',
-      image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://fs.buttercms.com/resize=width:885/K9eYmdaARySr0MwazhWO',
       technologies: ['React', 'TypeScript', 'Storybook', 'Rollup', 'NPM'],
       metrics: {
         code: '500+ LOC',
