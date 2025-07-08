@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="hero" className="pt-20  min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Enhanced 3D Background Animation */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#021526] via-[#0C0C0C] to-[#021526]"></div>
