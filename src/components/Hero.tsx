@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
   const downloadResume = () => {
     // Create a temporary link for resume download
     const link = document.createElement('a');
-    link.href = './Harshwardhan.pdf'; // You would replace this with actual resume URL
+    link.href = 'https://raw.githubusercontent.com/harshcodesit/myPortfolio/main/public/Harshwardhan.pdf'; // You would replace this with actual resume URL
     link.download = 'Harshwardhan_Singh_Panwar_Resume.pdf';
      document.body.appendChild(link);
   link.click();
