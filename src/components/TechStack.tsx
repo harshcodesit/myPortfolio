@@ -146,7 +146,7 @@ const TechStack: React.FC = () => {
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 animate-on-scroll">
           {[
             { number: '10+', label: 'Technologies', symbol: '</>' },
-            { number: '13+', label: 'Projects Built', symbol: '{}' },
+            { number: '20+', label: 'Projects Built', symbol: '{}' },
             { number: '9+', label: 'Months Experience', symbol: '$' },
             { number: '100%', label: 'Passion', symbol: '♥' }
           ].map((stat) => (
