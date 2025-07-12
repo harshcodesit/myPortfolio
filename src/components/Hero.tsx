@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Mail, Github, Linkedin, ExternalLink, Download } from 'lucide-react';
 import PenguinMascot from './PenguinMascot';
+import { smoothScrollTo } from '../utils/scrollUtils';
 
 const Hero: React.FC = () => {
   const [typedText, setTypedText] = useState('');
@@ -21,10 +22,7 @@ const Hero: React.FC = () => {
   }, []);
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    smoothScrollTo('contact');
   };
 
   const downloadResume = () => {

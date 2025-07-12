@@ -1,10 +1,17 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 export const useScrollReveal = () => {
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
   useEffect(() => {
+    // Clear any existing observer
+    if (observerRef.current) {
+      observerRef.current.disconnect();
+    }
+
     const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px',
+      threshold: [0.1, 0.3, 0.5, 0.7],
+      rootMargin: '0px 0px -10% 0px',
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -12,58 +19,81 @@ export const useScrollReveal = () => {
         if (entry.isIntersecting) {
           const element = entry.target as HTMLElement;
           
-          // Add reveal animation based on section
-          if (element.id === 'hero') {
+          // Add reveal animation based on section with improved timing
+          if (element.id === 'hero' && !element.classList.contains('animate-hero-reveal')) {
             element.classList.add('animate-hero-reveal');
-          } else if (element.id === 'about') {
+          } else if (element.id === 'about' && !element.classList.contains('animate-about-reveal')) {
             element.classList.add('animate-about-reveal');
-          } else if (element.id === 'tech-stack') {
+          } else if (element.id === 'tech-stack' && !element.classList.contains('animate-tech-reveal')) {
             element.classList.add('animate-tech-reveal');
-          } else if (element.id === 'projects') {
+          } else if (element.id === 'projects' && !element.classList.contains('animate-projects-reveal')) {
             element.classList.add('animate-projects-reveal');
-          } else if (element.id === 'experience') {
+          } else if (element.id === 'experience' && !element.classList.contains('animate-experience-reveal')) {
             element.classList.add('animate-experience-reveal');
-          } else if (element.id === 'contact') {
+          } else if (element.id === 'contact' && !element.classList.contains('animate-contact-reveal')) {
             element.classList.add('animate-contact-reveal');
           }
           
-          // Add staggered animations to child elements
+          // Improved staggered animations with better timing
           const children = element.querySelectorAll('.animate-on-scroll');
           children.forEach((child, index) => {
-            setTimeout(() => {
-              child.classList.add('animate-reveal');
-            }, index * 150);
+            // Use requestAnimationFrame for smoother timing
+            requestAnimationFrame(() => {
+              setTimeout(() => {
+                if (!child.classList.contains('animate-reveal')) {
+                  child.classList.add('animate-reveal');
+                }
+              }, index * 100); // Reduced delay for smoother feel
+            });
           });
+
+          // Handle individual animated elements
+          if (element.classList.contains('animate-fade-in-up') && !element.classList.contains('animate-reveal')) {
+            element.classList.add('animate-reveal');
+          }
         }
       });
     }, observerOptions);
 
-    // Observe all sections
-    const sections = document.querySelectorAll('section[id]');
-    sections.forEach((section) => observer.observe(section));
+    observerRef.current = observer;
 
-    // Observe individual animated elements
-    const animatedElements = document.querySelectorAll('.animate-fade-in-up, .animate-on-scroll');
-    animatedElements.forEach((el) => observer.observe(el));
+    // Observe all sections and animated elements in one pass
+    const allElements = document.querySelectorAll('section[id], .animate-fade-in-up, .animate-on-scroll');
+    allElements.forEach((el) => observer.observe(el));
 
-    return () => observer.disconnect();
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
   }, []);
 };
 
 export const useParallaxEffect = () => {
+  const ticking = useRef(false);
+  const lastScrollY = useRef(0);
+
   useEffect(() => {
     const handleScroll = () => {
-      const scrolled = window.pageYOffset;
-      const parallaxElements = document.querySelectorAll('.parallax-element');
-      
-      parallaxElements.forEach((element) => {
-        const speed = parseFloat(element.getAttribute('data-speed') || '0.5');
-        const yPos = -(scrolled * speed);
-        (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
-      });
+      if (!ticking.current) {
+        requestAnimationFrame(() => {
+          const scrolled = window.pageYOffset;
+          const parallaxElements = document.querySelectorAll('.parallax-element');
+          
+          parallaxElements.forEach((element) => {
+            const speed = parseFloat(element.getAttribute('data-speed') || '0.5');
+            const yPos = -(scrolled * speed);
+            (element as HTMLElement).style.transform = `translateY(${yPos}px)`;
+          });
+          
+          lastScrollY.current = scrolled;
+          ticking.current = false;
+        });
+        ticking.current = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 };

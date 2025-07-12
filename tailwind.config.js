@@ -14,23 +14,23 @@ export default {
         'mono': ['JetBrains Mono', 'Fira Code', 'Consolas', 'monospace'],
       },
       animation: {
-        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards',
         'typewriter': 'typewriter 3s steps(40) 1s 1 normal both',
         'bounce-slow': 'bounce 2s infinite',
-        'float-slow': 'floatSlow 6s ease-in-out infinite',
-        'float-slow-reverse': 'floatSlowReverse 8s ease-in-out infinite',
-        'float-diagonal': 'floatDiagonal 10s ease-in-out infinite',
-        'float-symbol': 'floatSymbol 12s ease-in-out infinite',
-        'float-symbol-reverse': 'floatSymbolReverse 15s ease-in-out infinite',
-        'wave': 'wave 2s ease-in-out infinite',
-        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+        'float-slow': 'floatSlow 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'float-slow-reverse': 'floatSlowReverse 10s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'float-diagonal': 'floatDiagonal 12s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'float-symbol': 'floatSymbol 15s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'float-symbol-reverse': 'floatSymbolReverse 18s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'wave': 'wave 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'pulse-glow': 'pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'flow-dots': 'flowDots 3s linear infinite',
       },
       keyframes: {
         fadeInUp: {
           '0%': {
             opacity: '0',
-            transform: 'translateY(30px)',
+            transform: 'translateY(25px)',
           },
           '100%': {
             opacity: '1',
@@ -50,7 +50,7 @@ export default {
             transform: 'translateY(0px) rotate(0deg)',
           },
           '50%': {
-            transform: 'translateY(-20px) rotate(5deg)',
+            transform: 'translateY(-15px) rotate(3deg)',
           },
         },
         floatSlowReverse: {
@@ -58,7 +58,7 @@ export default {
             transform: 'translateY(0px) rotate(0deg)',
           },
           '50%': {
-            transform: 'translateY(20px) rotate(-5deg)',
+            transform: 'translateY(15px) rotate(-3deg)',
           },
         },
         floatDiagonal: {
