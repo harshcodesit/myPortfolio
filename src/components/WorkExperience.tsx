@@ -10,12 +10,12 @@ const WorkExperience: React.FC = () => {
       duration: 'Feb 2025 - Present',
       description: 'Led the development of scalable web applications using MERN stack, improving system performance by 40%.',
       achievements: [
-        'Architected and delivered 5+ high-traffic web applications',
-        'Mentored a team of 3 junior developers',
+        'Architected and delivered a high-traffic web applications',
+        'Mentored a team of 2 junior developers',
         'Reduced application load time by 60% through optimization',
-        'Implemented CI/CD pipelines reducing deployment time by 75%'
+        'Implemented SEO Practices increasing Traffic gradually by 75%'
       ],
-      techUsed: ['React', 'Node.js', 'MongoDB', 'AWS', 'Docker']
+      techUsed: ['React', 'Node.js', 'MongoDB', 'WIX']
     },
     {
       role: 'Freelance Wix Developer',
@@ -24,12 +24,12 @@ const WorkExperience: React.FC = () => {
       duration: 'AUG 2024 - Jan 2025',
       description: 'Developed responsive web applications and RESTful APIs, serving 10,000+ daily active users.',
       achievements: [
-        'Built 8+ production-ready web applications',
-        'Integrated payment gateways and third-party APIs',
+        'Built 18+ production-ready web Pages',
+        'Integrated Wix Automation and third-party plugins',
         'Improved code quality by implementing testing frameworks',
-        'Collaborated with cross-functional teams of 15+ members'
+        'Designed a visually appealing Front-End'
       ],
-      techUsed: ['React', 'Express.js', 'MongoDB', 'Firebase', 'TypeScript']
+      techUsed: ['WIX','Wix Seo', 'Velo', 'Wix Editor', 'Node.Js']
     },
     {
       role: 'Junior Web Developer',
