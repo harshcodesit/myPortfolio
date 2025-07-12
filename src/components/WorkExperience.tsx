@@ -32,18 +32,18 @@ const WorkExperience: React.FC = () => {
       techUsed: ['WIX','Wix Seo', 'Velo', 'Wix Editor', 'Node.Js']
     },
     {
-      role: 'Junior Web Developer',
+      role: 'Java Intern',
       company: 'VaultofCodes',
       location: 'Remote',
       duration: 'Jan 2023 - Jul 2023',
       description: 'Contributed to frontend development and API integration while learning modern web technologies.',
       achievements: [
-        'Developed 15+ responsive web components',
-        'Participated in 3 successful product launches',
-        'Maintained 98% code quality standards',
-        'Reduced bug reports by 35% through thorough testing'
+        'Developed Flappy Bird',
+        'Designed Java frames',
+        'Implemented collide logics',
+        'Implemented deatiled Java classes'
       ],
-      techUsed: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js']
+      techUsed: ['Java', 'Utils', 'Java.awt', 'Java.string']
     }
   ];
 
