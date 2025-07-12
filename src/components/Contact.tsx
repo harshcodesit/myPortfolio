@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Send, Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -10,17 +11,40 @@ const Contact: React.FC = () => {
   const [focusedField, setFocusedField] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      alert('Message sent successfully! I\'ll get back to you soon.');
-      setFormData({ name: '', email: '', message: '' });
-    }, 2000);
-  };
+  //   // Simulate form submission
+  //   setTimeout(() => {
+  //     setIsSubmitting(false);
+  //     alert('Message sent successfully! I\'ll get back to you soon.');
+  //     setFormData({ name: '', email: '', message: '' });
+  //   }, 2000);
+  // };
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    const result = await emailjs.sendForm(
+      'service_v2lvdoc',          // Your service ID
+      'template_dgk5d5x',         // Your template ID
+      e.currentTarget,            // The actual HTML form element
+      'M3z7fve1yhJUTZlqN'         // Your public key
+    );
+
+    console.log('EmailJS result:', result);
+    alert("Message sent successfully! I'll get back to you soon.");
+    setFormData({ name: '', email: '', message: '' });
+  } catch (error: any) {
+    console.error('EmailJS Error:', error?.text || error);
+    alert('Failed to send message. Please check console.');
+  }
+
+  setIsSubmitting(false);
+};
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
