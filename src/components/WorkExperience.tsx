@@ -35,7 +35,7 @@ const WorkExperience: React.FC = () => {
       role: 'Java Intern',
       company: 'VaultofCodes',
       location: 'Remote',
-      duration: 'Jan 2023 - Jul 2023',
+      duration: 'Jan 2024 - Jul 2024',
       description: 'Contributed to frontend development and API integration while learning modern web technologies.',
       achievements: [
         'Developed Flappy Bird',
