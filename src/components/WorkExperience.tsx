@@ -11,7 +11,7 @@ const WorkExperience: React.FC = () => {
       description: 'Led the development of scalable web applications using MERN stack, improving system performance by 40%.',
       achievements: [
         'Architected and delivered a high-traffic web applications',
-        'Mentored a team of 2 junior developers',
+        'collaborated with a team of 2 senior developers',
         'Reduced application load time by 60% through optimization',
         'Implemented SEO Practices increasing Traffic gradually by 75%'
       ],
