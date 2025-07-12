@@ -24,7 +24,7 @@ const Projects: React.FC = () => {
       image: 'https://static.wixstatic.com/media/e47147_5af893ef49fb4ce7b8c936e54c70a1e2~mv2.jpg/v1/fill/w_1414,h_626,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/pexels-karthick-227261600-12041147.jpg',
       technologies: ['React', 'Express', 'Node.js', 'MongoDB','WIX','Velo' ],
       metrics: {
-        code: '8+ pages',
+        code: '21+ pages',
         features: 'Freelance',
         performance: '88% Score'
       },
