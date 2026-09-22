@@ -7,9 +7,9 @@ export const animationUtils = {
   },
 
   // Debounce function for scroll events
-  debounce: (func: Function, wait: number) => {
-    let timeout: NodeJS.Timeout;
-    return function executedFunction(...args: any[]) {
+  debounce: <T extends (...args: unknown[]) => void>(func: T, wait: number) => {
+    let timeout: ReturnType<typeof setTimeout>;
+    return function executedFunction(...args: Parameters<T>) {
       const later = () => {
         clearTimeout(timeout);
         func(...args);
@@ -20,13 +20,13 @@ export const animationUtils = {
   },
 
   // Throttle function for performance
-  throttle: (func: Function, limit: number) => {
+  throttle: <T extends (...args: unknown[]) => void>(func: T, limit: number) => {
     let inThrottle: boolean;
-    return function executedFunction(...args: any[]) {
+    return function executedFunction(this: unknown, ...args: Parameters<T>) {
       if (!inThrottle) {
         func.apply(this, args);
         inThrottle = true;
-        setTimeout(() => inThrottle = false, limit);
+        setTimeout(() => (inThrottle = false), limit);
       }
     };
   },

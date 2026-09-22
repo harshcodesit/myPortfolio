@@ -4,40 +4,40 @@ import { Github, Star, GitFork, Code2, Zap, Heart } from 'lucide-react';
 const MinorProjects: React.FC = () => {
   const minorProjects = [
     {
-      title: 'SwapReads',
-      description: 'SwapReads is a sleek online platform for book lovers to exchange, discover, and share their favorite reads effortlessly.',
-      stars: 321,
-      forks: 696
+      title: 'GSSoC24 Open Source UI Suite',
+      description: 'Collaborated in GirlScript Summer of Code (GSSoC) by engineering 12+ modular, accessible UI components and interactive micro-animations across multiple pull requests.',
+      stars: 570,
+      forks: 12
     },
     {
-      title: 'Postman-Challenge',
-      description: 'The GitHub repo "Postman-Challenge" by GSSoC24 is a community-driven project focused on solving API challenges using Postman to enhance API testing skills.',
+      title: 'Postman API Testing Challenge',
+      description: 'Community-driven API testing track focusing on end-to-end RESTful API validation, collection debugging, environment variables, and automated assertions using Postman.',
       stars: 224,
-      forks: 290
+      forks: 48
     },
     {
-      title: 'Streamlit Docker & Linux Control Panel',
-      description: 'A Streamlit dashboard that connects to an Oracle VM via SSH, enabling users to run and manage Docker commands alongside general Linux commands through an intuitive, unified interface.',
-      stars: 2,
+      title: 'Industrial Training - Linux World (2025)',
+      description: 'Practical training covering Linux administration, Docker containerization fundamentals, and AWS cloud compute architecture (EC2, S3).',
+      stars: 100,
+      forks: 25
+    },
+    {
+      title: 'Full Stack Certification - Apna College (2024)',
+      description: 'Comprehensive certification program covering production-grade MERN architectures, database schema modeling, and secure RESTful API design.',
+      stars: 100,
+      forks: 20
+    },
+    {
+      title: 'RFC 7519 Base64URL Auth Utility',
+      description: 'Type-safe zero-dependency utility (<1KB) delivering client-side payload parsing, real-time expiration monitoring, and declarative route guards with Vitest.',
+      stars: 45,
       forks: 8
     },
     {
-      title: 'WhisperVerse: Your Dark Muse in Two Lines',
-      description: 'A machine learning poet that listens to your words and replies with hauntingly beautiful two-line dark poems, offering advice wrapped in mystery and mood.t',
-      stars: 5,
-      forks: 0
-    },
-    {
-      title: 'Snap & Share',
-      description: 'A full-stack web app that lets you capture photos, fetch your location, and instantly share both via WhatsApp—seamlessly blending browser features with real-time messaging.',
-      stars: 3,
-      forks: 2
-    },
-    {
-      title: 'Experience-Based Salary Predictor',
-      description: 'A Python project that predicts estimated salary based on the years of experience provided, using machine learning for accurate forecasts.',
-      stars: 0,
-      forks: 0
+      title: 'Geospatial Radius Querying Service',
+      description: 'Custom geospatial query service utilizing MongoDB $near and GeoJSON coordinates to aggregate spontaneous hyperlocal meetups within configurable radius limits.',
+      stars: 50,
+      forks: 14
     }
   ];
 

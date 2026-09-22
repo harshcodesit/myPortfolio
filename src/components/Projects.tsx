@@ -4,48 +4,48 @@ import { ExternalLink, Github, Code, Users, Zap } from 'lucide-react';
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: 'syNAPse',
-      description: 'A revolutionary dream-sharing MERN application where users can share their dreams and participate in community voting battles.',
-      image: 'https://images.newscientist.com/wp-content/uploads/2024/07/15121713/SEI_212138415.jpg',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
+      title: 'Unplanned – Hyperlocal Micro-Adventure Platform',
+      description: 'Architected a responsive full-stack discovery platform featuring geospatial radius querying ($near/GeoJSON) to aggregate real-time spontaneous local meetups for 1,000+ active users. Engineered production-hardened REST APIs with dual-layer JWT authentication, cross-origin security headers (Helmet), payload compression, and Cloudinary media.',
+      image: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80',
+      technologies: ['React.js', 'TypeScript', 'Node.js', 'Express.js', 'MongoDB', 'RESTful APIs'],
       metrics: {
-        code: '15+ Features',
-        features: 'Hackathon',
-        performance: '92% Score'
+        code: '1,000+ Users',
+        features: 'GeoJSON $near',
+        performance: 'Dual JWT Auth'
       },
       links: {
-        github: 'https://github.com/harshcodesit/Devsummit2025',
-        live: '#'
+        github: 'https://github.com/harshcodesit/Unplanned',
+        live: 'https://unplanned-eight.vercel.app/'
       }
     },
     {
-      title: 'Best India Tours',
-      description: 'BestIndiaTour.in offers curated tour packages and travel guides for exploring India’s top destinations. It makes planning your perfect trip easy and convenient.',
-      image: 'https://static.wixstatic.com/media/e47147_5af893ef49fb4ce7b8c936e54c70a1e2~mv2.jpg/v1/fill/w_1414,h_626,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/pexels-karthick-227261600-12041147.jpg',
-      technologies: ['React', 'Express', 'Node.js', 'MongoDB','WIX','Velo' ],
+      title: 'React JWT Guard | NPM Package',
+      description: 'Authored and published a zero-dependency, type-safe React auth utility (<1KB) featuring RFC 7519 Base64URL decoding, real-time expiration lifecycle monitoring, and declarative route guarding, verified via an automated Vitest test suite.',
+      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80',
+      technologies: ['React.js', 'JavaScript', 'Rollup', 'NPM', 'Vitest'],
       metrics: {
-        code: '21+ pages',
-        features: 'Freelance',
-        performance: '88% Score'
+        code: '<1KB Zero-Dep',
+        features: 'RFC 7519 Auth',
+        performance: 'Vitest Suite'
       },
       links: {
-        github: 'https://github.com/harshcodesit/AIETM-Hackathon-2024',
-        live: 'https://www.bestindiatour.in/'
+        github: 'https://github.com/harshcodesit/react-jwt-guard-npm',
+        live: 'https://www.npmjs.com/package/react-jwt-guard'
       }
     },
     {
-      title: 'all-react-buttons',
-      description: 'A comprehensive React button component library published to NPM, featuring 50+ customizable button styles and variants.',
-      image: 'https://fs.buttercms.com/resize=width:885/K9eYmdaARySr0MwazhWO',
-      technologies: ['React', 'TypeScript', 'Storybook', 'Rollup', 'NPM'],
+      title: 'Swap Reads | Open Source Contribution | GSSOC24',
+      description: 'Collaborated in GirlScript Summer of Code (GSSoC) by engineering 12+ modular, accessible UI components and interactive micro-animations across multiple pull requests. Achieved official program badges by accumulating 570 contribution points through bug fixes, and cross-browser UI optimizations.',
+      image: 'https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80',
+      technologies: ['JavaScript', 'HTML5', 'Tailwind CSS', 'Git', 'GitHub'],
       metrics: {
-        code: '500+ LOC',
-        features: '500+ downloads',
-        performance: '95% Score'
+        code: '570 Points',
+        features: '12+ UI Components',
+        performance: 'GSSoC Badges'
       },
       links: {
-        github: 'https://github.com/harshcodesit/NPM-Package',
-        live: 'https://npmjs.com/package/all-react-buttons'
+        github: 'https://github.com/harshcodesit/SwapReads',
+        live: 'https://swapreads.vercel.app'
       }
     }
   ];
@@ -82,7 +82,7 @@ const Projects: React.FC = () => {
             >
               {/* Blob Background */}
               <div className="blob-background"></div>
-              
+
               {/* Project Image */}
               <div className="relative overflow-hidden blob-image-container">
                 <img
@@ -91,7 +91,7 @@ const Projects: React.FC = () => {
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#021526]/90 via-[#021526]/50 to-transparent group-hover:from-[#021526]/70 transition-all duration-500"></div>
-                
+
                 {/* Floating Code Symbol */}
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:rotate-12">
                   <div className="text-[#6EACDA] text-lg font-mono animate-pulse bg-[#021526]/80 px-2 py-1 rounded">
@@ -105,7 +105,7 @@ const Projects: React.FC = () => {
                 <h3 className="text-xl font-semibold text-[#E0E0E0] mb-3 group-hover:text-[#6EACDA] transition-colors duration-300 transform group-hover:translate-x-2">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-[#B0B0B0] text-sm mb-4 leading-relaxed group-hover:text-[#E0E0E0] transition-colors duration-300">
                   {project.description}
                 </p>
@@ -151,7 +151,7 @@ const Projects: React.FC = () => {
                     <span>View Code</span>
                     <div className="btn-glow"></div>
                   </a>
-                  
+
                   {project.links.live !== '#' && (
                     <a
                       href={project.links.live}

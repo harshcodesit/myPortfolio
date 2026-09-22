@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Copyright */}
           <div className="text-[#B0B0B0] text-sm">
-            © 2025 Harshwardhan Singh Panwar. All rights reserved.
+            © {2026} Harshwardhan Singh Panwar. All rights reserved.
           </div>
 
           {/* Navigation Links */}
@@ -41,11 +41,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Built with love */}
-          <div className="flex items-center gap-2 text-[#B0B0B0] text-sm">
-            <span>Built with</span>
-            <Heart size={16} className="text-red-500 animate-pulse" />
-            <span>and MERN Stack</span>
-          </div>
+
         </div>
       </div>
     </footer>

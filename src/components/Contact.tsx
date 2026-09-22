@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { Send, Mail, Github, Linkedin, Phone, MapPin } from 'lucide-react';
 import emailjs from 'emailjs-com';
 
 const Contact: React.FC = () => {
@@ -37,8 +37,8 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     console.log('EmailJS result:', result);
     alert("Message sent successfully! I'll get back to you soon.");
     setFormData({ name: '', email: '', message: '' });
-  } catch (error: any) {
-    console.error('EmailJS Error:', error?.text || error);
+  } catch (error: unknown) {
+    console.error('EmailJS Error:', error);
     alert('Failed to send message. Please check console.');
   }
 
@@ -120,7 +120,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                       onBlur={() => setFocusedField(null)}
                       required
                       className="w-full bg-[#021526] border border-[#6EACDA]/30 rounded-lg px-4 py-3 text-[#E0E0E0] placeholder-[#B0B0B0] focus:outline-none focus:border-[#6EACDA] focus:ring-2 focus:ring-[#6EACDA]/20 transition-all duration-300"
-                      placeholder="your.email@example.com"
+                      placeholder="your.email@gmail.com"
                     />
                     {focusedField === 'email' && (
                       <div className="absolute -top-2 -right-2 text-[#6EACDA] text-xs font-mono animate-pulse">
@@ -192,22 +192,50 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                   <div>
                     <p className="text-[#E0E0E0] font-medium">Email</p>
                     <a 
-                      href="mailto:harshwardhan9352@example.com" 
+                      href="mailto:harshwardhan.codes@gmail.com" 
                       className="text-[#B0B0B0] hover:text-[#6EACDA] transition-colors"
                     >
-                      harshwardhan9352@example.com
+                      harshwardhan.codes@gmail.com
                     </a>
                   </div>
                 </div>
 
+                <div className="flex items-center gap-4 animate-on-scroll">
+                  <div className="bg-[#6EACDA]/20 p-3 rounded-lg">
+                    <Phone className="text-[#6EACDA]" size={24} />
+                  </div>
+                  <div>
+                    <p className="text-[#E0E0E0] font-medium">Phone</p>
+                    <a 
+                      href="tel:+919352444787" 
+                      className="text-[#B0B0B0] hover:text-[#6EACDA] transition-colors"
+                    >
+                      +91 9352444787
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4 animate-on-scroll">
+                  <div className="bg-[#6EACDA]/20 p-3 rounded-lg">
+                    <MapPin className="text-[#6EACDA]" size={24} />
+                  </div>
+                  <div>
+                    <p className="text-[#E0E0E0] font-medium">Location</p>
+                    <span className="text-[#B0B0B0]">
+                      Jaipur, Rajasthan
+                    </span>
+                  </div>
+                </div>
+
                 <div className="border-t border-[#6EACDA]/20 pt-6 animate-on-scroll">
-                  <h4 className="text-[#E0E0E0] font-medium mb-4">Follow Me</h4>
+                  <h4 className="text-[#E0E0E0] font-medium mb-4">Connect With Me</h4>
                   <div className="flex gap-4">
                     <a
                       href="https://github.com/harshcodesit"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-[#6EACDA]/20 p-3 rounded-lg hover:bg-[#6EACDA]/30 transition-colors group"
+                      aria-label="GitHub Profile"
                     >
                       <Github className="text-[#6EACDA] group-hover:scale-110 transition-transform" size={24} />
                     </a>
@@ -216,16 +244,23 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-[#6EACDA]/20 p-3 rounded-lg hover:bg-[#6EACDA]/30 transition-colors group"
+                      aria-label="LinkedIn Profile"
                     >
                       <Linkedin className="text-[#6EACDA] group-hover:scale-110 transition-transform" size={24} />
                     </a>
                     <a
-                      href="https://twitter.com/harshwardhan"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="mailto:harshwardhan.codes@gmail.com"
                       className="bg-[#6EACDA]/20 p-3 rounded-lg hover:bg-[#6EACDA]/30 transition-colors group"
+                      aria-label="Email Me"
                     >
-                      <Twitter className="text-[#6EACDA] group-hover:scale-110 transition-transform" size={24} />
+                      <Mail className="text-[#6EACDA] group-hover:scale-110 transition-transform" size={24} />
+                    </a>
+                    <a
+                      href="tel:+919352444787"
+                      className="bg-[#6EACDA]/20 p-3 rounded-lg hover:bg-[#6EACDA]/30 transition-colors group"
+                      aria-label="Call Me"
+                    >
+                      <Phone className="text-[#6EACDA] group-hover:scale-110 transition-transform" size={24} />
                     </a>
                   </div>
                 </div>
@@ -236,10 +271,10 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                       <span className="text-[#6EACDA]">$</span> whoami
                     </div>
                     <div className="pl-4 text-[#E0E0E0]">
-                      Full Stack Developer
+                      Harshwardhan Singh Panwar - MERN Stack Developer
                     </div>
                     <div className="mt-2">
-                      <span className="text-[#6EACDA]">$</span> echo "Always ready to build something amazing!"
+                      <span className="text-[#6EACDA]">$</span> echo "Passionate about performant web architectures & open source."
                     </div>
                   </div>
                 </div>

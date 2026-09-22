@@ -6,50 +6,51 @@ const TechStack: React.FC = () => {
 
   const techGroups = [
     {
-      title: 'Front-End',
+      title: 'Frontend',
       icon: <Code size={28} />,
       color: '#61DAFB',
       technologies: [
-        { name: 'HTML5', level: 95, description: 'Semantic markup and accessibility' },
-        { name: 'CSS3', level: 90, description: 'Modern styling and animations' },
-        { name: 'JavaScript', level: 92, description: 'ES6+ and modern features' },
-        { name: 'ReactJS', level: 88, description: 'Component-based architecture' },
-        { name: 'TypeScript', level: 15, description: 'Type-safe development' }
+        { name: 'React.js', level: 90, description: 'Component architecture, hooks & lifecycle' },
+        { name: 'TypeScript', level: 85, description: 'Type-safe scalable application development' },
+        { name: 'Vite', level: 88, description: 'Next-gen fast frontend tooling & bundling' },
+        { name: 'React Router & Context API', level: 88, description: 'Declarative routing & global state management' },
+        { name: 'HTML5 & CSS3', level: 92, description: 'Responsive web design, modern UI & accessibility' }
       ]
     },
     {
-      title: 'Back-End',
+      title: 'Backend',
       icon: <Server size={28} />,
       color: '#68A063',
       technologies: [
-        { name: 'NodeJS', level: 87, description: 'Server-side JavaScript runtime' },
-        { name: 'ExpressJS', level: 89, description: 'Web application framework' },
-        { name: 'MongoDB', level: 83, description: 'NoSQL database solutions' },
-        { name: 'Firebase', level: 80, description: 'Backend-as-a-Service platform' }
+        { name: 'Node.js', level: 88, description: 'Server-side JavaScript runtime & event loop' },
+        { name: 'Express.js', level: 88, description: 'Web application framework & modular routes' },
+        { name: 'RESTful APIs', level: 90, description: 'Production-hardened API architecture' },
+        { name: 'JWT Authentication', level: 86, description: 'Dual-layer token auth & secure lifecycle' },
+        { name: 'Middleware Architecture', level: 85, description: 'Helmet security, compression & error handling' }
       ]
     },
     {
-      title: 'Languages',
+      title: 'Databases & Languages',
       icon: <Database size={28} />,
       color: '#F7DF1E',
       technologies: [
-        { name: 'JavaScript', level: 92, description: 'Primary programming language' },
-        { name: 'Java', level: 78, description: 'Object-oriented programming' },
-        { name: 'Python', level: 75, description: 'Scripting and automation' },
-        { name: 'C++', level: 70, description: 'System programming' },
-        { name: 'Shell', level: 82, description: 'Linux command line' }
+        { name: 'MongoDB (Mongoose)', level: 88, description: 'NoSQL document modeling & GeoJSON geospatial queries' },
+        { name: 'PostgreSQL & MySQL', level: 80, description: 'Relational data architectures & SQL querying' },
+        { name: 'AWS DynamoDB', level: 75, description: 'Managed cloud NoSQL database' },
+        { name: 'JavaScript (ES6+)', level: 92, description: 'Modern asynchronous programming & closures' },
+        { name: 'SQL', level: 82, description: 'Relational queries, joins & schema design' }
       ]
     },
     {
-      title: 'Tools & Platforms',
+      title: 'Cloud & DevOps',
       icon: <Tool size={28} />,
       color: '#0db7ed',
       technologies: [
-        { name: 'Docker', level: 80, description: 'Containerization platform' },
-        { name: 'Kubernetes', level: 72, description: 'Container orchestration' },
-        { name: 'Git', level: 90, description: 'Version control system' },
-        { name: 'AWS', level: 75, description: 'Cloud computing services' },
-        { name: 'Firebase', level: 80, description: 'Development platform' }
+        { name: 'AWS (EC2, S3)', level: 78, description: 'Cloud compute, hosting & secure object storage' },
+        { name: 'Git & GitHub', level: 90, description: 'Version control, branching & open-source PRs' },
+        { name: 'Docker (Basics)', level: 75, description: 'Containerization & reproducible environments' },
+        { name: 'Postman', level: 88, description: 'API testing, collection runner & debugging' },
+        { name: 'Vercel & Render', level: 85, description: 'Continuous deployment & cloud hosting' }
       ]
     }
   ];
@@ -72,7 +73,7 @@ const TechStack: React.FC = () => {
             Tech Stack
           </h2>
           <p className="text-xl text-[#B0B0B0] animate-on-scroll font-mono">
-            <span className="text-[#6EACDA]">$</span> cat my_arsenal.json
+            <span className="text-[#6EACDA]">$</span> cat verified_skills.json
           </p>
         </div>
 
@@ -132,10 +133,10 @@ const TechStack: React.FC = () => {
               {/* Floating Symbols for Each Category */}
               <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity duration-300">
                 <div className="text-[#6EACDA] text-lg font-mono developer-font animate-pulse">
-                  {group.title === 'Front-End' && '</>'}
-                  {group.title === 'Back-End' && 'API'}
-                  {group.title === 'Languages' && '{}'}
-                  {group.title === 'Tools & Platforms' && '$'}
+                  {group.title === 'Frontend' && '</>'}
+                  {group.title === 'Backend' && 'API'}
+                  {group.title === 'Databases & Languages' && '{ }'}
+                  {group.title === 'Cloud & DevOps' && 'AWS'}
                 </div>
               </div>
             </div>
@@ -145,10 +146,10 @@ const TechStack: React.FC = () => {
         {/* Tech Summary Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 animate-on-scroll">
           {[
-            { number: '10+', label: 'Technologies', symbol: '</>' },
-            { number: '20+', label: 'Projects Built', symbol: '{}' },
-            { number: '9+', label: 'Months Experience', symbol: '$' },
-            { number: '100%', label: 'Passion', symbol: '♥' }
+            { number: '1,000+', label: 'Active Users Served', symbol: '</>' },
+            { number: '570', label: 'GSSoC Points Earned', symbol: '{}' },
+            { number: '50%', label: 'Bounce Rate Decrease', symbol: '$' },
+            { number: '87%', label: 'Organic Traffic Growth', symbol: '↗' }
           ].map((stat) => (
             <div key={stat.label} className="text-center group animate-on-scroll">
               <div className="text-2xl font-bold text-[#6EACDA] developer-font mb-1 group-hover:scale-110 transition-transform duration-300">

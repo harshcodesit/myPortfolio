@@ -4,46 +4,46 @@ import { Calendar, MapPin, Award } from 'lucide-react';
 const WorkExperience: React.FC = () => {
   const experiences = [
     {
-      role: 'Freelance Web Developer',
-      company: 'Rajputana Tours Pvt. Ltd.',
-      location: 'Rajasthan, India',
-      duration: 'Feb 2025 - Present',
-      description: 'Led the development of scalable web applications using MERN stack, improving system performance by 40%.',
-      achievements: [
-        'Architected and delivered a high-traffic web applications',
-        'collaborated with a team of 2 senior developers',
-        'Reduced application load time by 60% through optimization',
-        'Implemented SEO Practices increasing Traffic gradually by 75%'
-      ],
-      techUsed: ['React', 'Node.js', 'MongoDB', 'WIX']
-    },
-    {
-      role: 'Freelance Wix Developer',
+      role: 'Wix Developer and Designer',
       company: 'Raj India Tours',
       location: 'Remote',
-      duration: 'AUG 2024 - Jan 2025',
-      description: 'Developed responsive web applications and RESTful APIs, serving 10,000+ daily active users.',
+      duration: 'Aug 2025 - Nov 2025',
+      description: 'Designed and shipped custom client-facing web solutions tailored to travel domain needs as a Freelance developer.',
       achievements: [
-        'Built 18+ production-ready web Pages',
-        'Integrated Wix Automation and third-party plugins',
-        'Improved code quality by implementing testing frameworks',
-        'Designed a visually appealing Front-End'
+        'Designed and shipped custom client-facing web solutions tailored to travel domain needs',
+        'Decreased site bounce rate by 50% through UX and performance optimizations',
+        'Implemented search engine optimization (SEO) best practices',
+        'Drove an 87% increase in organic web traffic'
       ],
-      techUsed: ['WIX','Wix Seo', 'Velo', 'Wix Editor', 'Node.Js']
+      techUsed: ['Wix', 'Velo', 'JavaScript', 'SEO', 'Responsive Design']
     },
     {
-      role: 'Java Intern',
-      company: 'VaultofCodes',
+      role: 'Open Source Contributor',
+      company: 'GirlScript Summer of Code (GSSoC24)',
       location: 'Remote',
-      duration: 'Jan 2024 - Jul 2024',
-      description: 'Contributed to frontend development and API integration while learning modern web technologies.',
+      duration: 'May 2024 - Aug 2024',
+      description: 'Contributed to open-source codebases during the GirlScript Summer of Code program.',
       achievements: [
-        'Developed Flappy Bird',
-        'Designed Java frames',
-        'Implemented collide logics',
-        'Implemented deatiled Java classes'
+        'Engineered 12+ modular, accessible UI components and interactive micro-animations',
+        'Achieved official program badges by accumulating 570 contribution points',
+        'Authored clean bug fixes and cross-browser UI optimizations across multiple PRs',
+        'Maintained strict accessibility and responsive design standards'
       ],
-      techUsed: ['Java', 'Utils', 'Java.awt', 'Java.string']
+      techUsed: ['JavaScript', 'HTML5', 'Tailwind CSS', 'Git', 'GitHub']
+    },
+    {
+      role: 'Industrial Trainee - Cloud & DevOps',
+      company: 'Linux World',
+      location: 'Jaipur, Rajasthan',
+      duration: '2025',
+      description: 'Completed comprehensive industrial training focused on cloud infrastructure and DevOps practices.',
+      achievements: [
+        'Trained on Linux command line administration and system management',
+        'Engineered containerized application environments with Docker (Basics)',
+        'Worked with AWS cloud computing and storage services (EC2, S3)',
+        'Conducted API validations and integration testing using Postman'
+      ],
+      techUsed: ['Linux', 'AWS (EC2, S3)', 'Docker (Basics)', 'Git', 'Postman']
     }
   ];
 

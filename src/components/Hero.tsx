@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Mail, Github, Linkedin, ExternalLink, Download } from 'lucide-react';
+import { ChevronDown, Mail, Github, Linkedin, Phone, Download } from 'lucide-react';
 import PenguinMascot from './PenguinMascot';
 import { smoothScrollTo } from '../utils/scrollUtils';
 
 const Hero: React.FC = () => {
   const [typedText, setTypedText] = useState('');
-  const fullText = 'Full Stack Web Developer';
+  const fullText = 'MERN Stack Developer';
 
   useEffect(() => {
     let i = 0;
@@ -26,15 +26,12 @@ const Hero: React.FC = () => {
   };
 
   const downloadResume = () => {
-    // Create a temporary link for resume download
     const link = document.createElement('a');
-    link.href = 'https://raw.githubusercontent.com/harshcodesit/myPortfolio/main/public/Harshwardhan.pdf'; // You would replace this with actual resume URL
+    link.href = 'https://drive.google.com/file/d/1ONQKUObWRo92VCknmgqPM7gBUpNn8qD0/view?usp=sharing';
     link.download = 'Harshwardhan_Singh_Panwar_Resume.pdf';
-     document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-    // Simulate download for demo
-    // alert('Resume download would start here!');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -42,7 +39,7 @@ const Hero: React.FC = () => {
       {/* Enhanced 3D Background Animation */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#021526] via-[#0C0C0C] to-[#021526]"></div>
-        
+
         {/* 3D Floating Lines with Enhanced Depth */}
         <div className="absolute inset-0 parallax-element" data-speed="0.3">
           <div className="animate-float-slow absolute top-1/4 left-1/4 w-64 h-1 bg-gradient-to-r from-transparent via-[#6EACDA]/30 to-transparent transform rotate-12 blur-[0.5px]"></div>
@@ -51,7 +48,7 @@ const Hero: React.FC = () => {
           <div className="animate-float-slow absolute top-1/6 right-1/3 w-56 h-1 bg-gradient-to-r from-transparent via-[#6EACDA]/25 to-transparent transform rotate-65"></div>
           <div className="animate-float-slow-reverse absolute bottom-1/4 left-1/6 w-40 h-1 bg-gradient-to-r from-transparent via-[#6EACDA]/18 to-transparent transform -rotate-30"></div>
         </div>
-        
+
         {/* Enhanced Floating Developer Symbols */}
         <div className="absolute inset-0 overflow-hidden parallax-element" data-speed="0.5">
           <div className="animate-float-symbol-enhanced absolute top-1/4 left-1/6 text-[#6EACDA]/8 text-3xl font-mono developer-font">{'<>'}</div>
@@ -95,14 +92,14 @@ const Hero: React.FC = () => {
                   Singh Panwar
                 </span>
               </h1>
-              
+
               <div className="animate-fade-in-up animation-delay-400 animate-on-scroll">
                 <div className="text-xl sm:text-2xl text-[#E0E0E0] font-light mb-2">
                   <span className="typewriter font-mono">{typedText}</span>
                   <span className="animate-pulse text-[#6EACDA]">|</span>
                 </div>
                 <p className="text-lg text-[#B0B0B0] developer-font">
-                  MERN Enthusiast <span className="text-[#6EACDA]">|</span> Clean Code Advocate <span className="text-[#6EACDA]">|</span> Problem Solver
+                  MERN Stack Developer <span className="text-[#6EACDA]">|</span> RESTful APIs <span className="text-[#6EACDA]">|</span> Open-Source Contributor
                 </p>
               </div>
 
@@ -112,13 +109,13 @@ const Hero: React.FC = () => {
                   <span className="text-[#B0B0B0]">$</span> whoami
                 </div>
                 <div className="text-[#E0E0E0] text-sm font-mono mb-2 pl-4">
-                  Harshwardhan Singh Panwar - Full Stack Developer
+                  Harshwardhan Singh Panwar - MERN Stack Developer
                 </div>
                 <div className="text-[#6EACDA] text-sm font-mono mb-1">
                   <span className="text-[#B0B0B0]">$</span> cat specialties.txt
                 </div>
                 <div className="text-[#E0E0E0] text-sm font-mono pl-4">
-                  React.js, Node.js, MongoDB, Express.js
+                  React.js, TypeScript, Node.js, Express.js, MongoDB
                 </div>
               </div>
             </div>
@@ -132,7 +129,7 @@ const Hero: React.FC = () => {
                 <Mail size={20} />
                 Contact Me
               </button>
-              
+
               <button
                 onClick={downloadResume}
                 className="btn-secondary flex items-center gap-2 justify-center"
@@ -163,20 +160,18 @@ const Hero: React.FC = () => {
                 <Linkedin size={28} />
               </a>
               <a
-                href="mailto:harshwardhan9352@example.com"
+                href="mailto:harshwardhan.codes@gmail.com"
                 className="text-[#B0B0B0] hover:text-[#6EACDA] transition-all duration-300 hover:scale-110 transform hover:rotate-12"
                 aria-label="Email Contact"
               >
                 <Mail size={28} />
               </a>
               <a
-                href="https://codepen.io/Harshwardhan-Singh-panwar"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="tel:+919352444787"
                 className="text-[#B0B0B0] hover:text-[#6EACDA] transition-all duration-300 hover:scale-110 transform hover:rotate-12"
-                aria-label="CodePen Profile"
+                aria-label="Phone Contact"
               >
-                <ExternalLink size={28} />
+                <Phone size={28} />
               </a>
             </div>
           </div>

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Code2, Coffee, Lightbulb, Target } from 'lucide-react';
+import { Users, Award, TrendingUp, GraduationCap } from 'lucide-react';
 
 const About: React.FC = () => {
   const stats = [
-    { icon: <Code2 size={32} />, value: '20+', label: 'Projects Completed' },
-    { icon: <Coffee size={32} />, value: '1000+', label: 'Cups of Coffee' },
-    { icon: <Lightbulb size={32} />, value: '9+', label: 'Months Experience' },
-    { icon: <Target size={32} />, value: '100%', label: 'Dedication' }
+    { icon: <Users size={32} />, value: '1,000+', label: 'Active Users (Unplanned)' },
+    { icon: <Award size={32} />, value: '570', label: 'GSSoC24 Contribution Points' },
+    { icon: <TrendingUp size={32} />, value: '87%', label: 'Organic Traffic Increase' },
+    { icon: <GraduationCap size={32} />, value: '8.68', label: 'B.Tech CS CGPA' }
   ];
 
   return (
@@ -25,7 +25,7 @@ const About: React.FC = () => {
             <span className="animate-typewriter">About Me</span>
           </h2>
           <p className="text-xl text-[#B0B0B0] animate-on-scroll">
-            Passionate Developer, Problem Solver, Innovation Driver
+            MERN Stack Developer & Open-Source Contributor
           </p>
         </div>
 
@@ -35,40 +35,42 @@ const About: React.FC = () => {
             <div className="space-y-6">
               <p className="text-lg text-[#B0B0B0] leading-relaxed animate-on-scroll">
                 Hello! I'm <span className="text-[#6EACDA] font-semibold">Harshwardhan Singh Panwar</span>, 
-                a passionate Full Stack Web Developer with a deep love for creating robust, scalable, 
-                and user-centric applications using the MERN stack.
+                a MERN Stack Developer with expertise in React.js, TypeScript, Node.js, Express, and MongoDB. 
+                I bring a proven track record in building production-grade web applications, architecting secure 
+                RESTful APIs, and implementing efficient SQL/NoSQL data architectures.
               </p>
               
               <p className="text-lg text-[#B0B0B0] leading-relaxed animate-on-scroll">
-                My journey in software development began with curiosity and has evolved into a mission 
-                to build meaningful digital experiences. I specialize in transforming complex problems 
-                into elegant solutions that users love and businesses rely on.
+                Passionate about performant web architectures, agile delivery, and open-source development, 
+                I specialize in turning complex requirements into scalable, robust systems. From engineering 
+                geospatial radius querying for 1,000+ active users to publishing zero-dependency NPM packages, 
+                I prioritize clean code, type safety, and real-world reliability.
               </p>
 
               <p className="text-lg text-[#B0B0B0] leading-relaxed animate-on-scroll">
-                When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
-                projects, or sharing knowledge with the developer community. I believe in writing clean, 
-                maintainable code and following best practices that stand the test of time.
+                When I'm not architecting full-stack applications, you'll find me contributing to open-source 
+                programs like GirlScript Summer of Code (GSSoC), optimizing client web solutions for 50% bounce 
+                rate decreases and 87% organic traffic growth, or exploring modern cloud workflows.
               </p>
 
               <div className="pt-4 animate-on-scroll">
-                <h3 className="text-xl font-semibold text-[#E0E0E0] mb-3">What I Bring to the Table</h3>
+                <h3 className="text-xl font-semibold text-[#E0E0E0] mb-3">Core Competencies</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-3 text-[#B0B0B0] animate-on-scroll">
                     <div className="w-2 h-2 bg-[#6EACDA] rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Full-stack expertise with modern web technologies</span>
+                    <span>Full-stack MERN & TypeScript application development</span>
                   </li>
                   <li className="flex items-start gap-3 text-[#B0B0B0] animate-on-scroll">
                     <div className="w-2 h-2 bg-[#6EACDA] rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Strong focus on performance optimization and scalability</span>
+                    <span>Production-hardened REST APIs with dual-layer JWT authentication</span>
                   </li>
                   <li className="flex items-start gap-3 text-[#B0B0B0] animate-on-scroll">
                     <div className="w-2 h-2 bg-[#6EACDA] rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Collaborative mindset with excellent communication skills</span>
+                    <span>SQL & NoSQL architectures (MongoDB, PostgreSQL, MySQL, DynamoDB)</span>
                   </li>
                   <li className="flex items-start gap-3 text-[#B0B0B0] animate-on-scroll">
                     <div className="w-2 h-2 bg-[#6EACDA] rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Continuous learning and adaptation to emerging technologies</span>
+                    <span>Open-source collaboration, modular UI design, and SEO optimization</span>
                   </li>
                 </ul>
               </div>
@@ -100,11 +102,10 @@ const About: React.FC = () => {
             <div className="mt-8 bg-[#0C0C0C]/50 backdrop-blur-sm border border-[#6EACDA]/20 rounded-lg p-6 animate-on-scroll">
               <h3 className="text-lg font-semibold text-[#E0E0E0] mb-3 flex items-center gap-2">
                 <div className="w-3 h-3 bg-[#6EACDA] rounded-full"></div>
-                My Philosophy
+                Professional Focus
               </h3>
               <p className="text-[#B0B0B0] text-sm leading-relaxed italic">
-                "Code is poetry in motion. Every line should tell a story, every function should serve a purpose, 
-                and every project should make a difference. I don't just write code – I craft digital experiences."
+                "Passionate about performant web architectures, agile delivery, and open-source development. Building production-grade, secure, and accessible applications with clean, verifiable results."
               </p>
             </div>
           </div>
