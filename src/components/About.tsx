@@ -3,7 +3,7 @@ import { Users, Award, TrendingUp, GraduationCap } from 'lucide-react';
 
 const About: React.FC = () => {
   const stats = [
-    { icon: <Users size={32} />, value: '1,000+', label: 'Active Users (Unplanned)' },
+    { icon: <Users size={32} />, value: '1,000+', label: 'Handeled Users (Unplanned)' },
     { icon: <Award size={32} />, value: '570', label: 'GSSoC24 Contribution Points' },
     { icon: <TrendingUp size={32} />, value: '87%', label: 'Organic Traffic Increase' },
     { icon: <GraduationCap size={32} />, value: '8.68', label: 'B.Tech CS CGPA' }
@@ -34,22 +34,22 @@ const About: React.FC = () => {
           <div className="animate-on-scroll">
             <div className="space-y-6">
               <p className="text-lg text-[#B0B0B0] leading-relaxed animate-on-scroll">
-                Hello! I'm <span className="text-[#6EACDA] font-semibold">Harshwardhan Singh Panwar</span>, 
-                a MERN Stack Developer with expertise in React.js, TypeScript, Node.js, Express, and MongoDB. 
-                I bring a proven track record in building production-grade web applications, architecting secure 
+                Hello! I'm <span className="text-[#6EACDA] font-semibold">Harshwardhan Singh Panwar</span>,
+                a MERN Stack Developer with expertise in React.js, TypeScript, Node.js, Express, and MongoDB.
+                I bring a proven track record in building production-grade web applications, architecting secure
                 RESTful APIs, and implementing efficient SQL/NoSQL data architectures.
               </p>
-              
+
               <p className="text-lg text-[#B0B0B0] leading-relaxed animate-on-scroll">
-                Passionate about performant web architectures, agile delivery, and open-source development, 
-                I specialize in turning complex requirements into scalable, robust systems. From engineering 
-                geospatial radius querying for 1,000+ active users to publishing zero-dependency NPM packages, 
+                Passionate about performant web architectures, agile delivery, and open-source development,
+                I specialize in turning complex requirements into scalable, robust systems. From engineering
+                geospatial radius querying for 1,000+ active users to publishing zero-dependency NPM packages,
                 I prioritize clean code, type safety, and real-world reliability.
               </p>
 
               <p className="text-lg text-[#B0B0B0] leading-relaxed animate-on-scroll">
-                When I'm not architecting full-stack applications, you'll find me contributing to open-source 
-                programs like GirlScript Summer of Code (GSSoC), optimizing client web solutions for 50% bounce 
+                When I'm not architecting full-stack applications, you'll find me contributing to open-source
+                programs like GirlScript Summer of Code (GSSoC), optimizing client web solutions for 50% bounce
                 rate decreases and 87% organic traffic growth, or exploring modern cloud workflows.
               </p>
 

@@ -92,7 +92,7 @@ const TechStack: React.FC = () => {
                   <Zap size={16} className="text-[#6EACDA] animate-pulse" />
                 </div>
               </div>
-              
+
               <div className="space-y-4">
                 {group.technologies.map((tech) => (
                   <div
@@ -109,21 +109,20 @@ const TechStack: React.FC = () => {
                         {tech.level}%
                       </span>
                     </div>
-                    
+
                     {/* Skill Progress Bar */}
                     <div className="w-full bg-[#021526] rounded-full h-2 overflow-hidden">
                       <div
                         className="h-full bg-gradient-to-r from-[#6EACDA] to-[#4A90E2] rounded-full transition-all duration-500 ease-out"
-                        style={{ 
+                        style={{
                           width: hoveredTech === tech.name ? `${tech.level}%` : '0%',
                         }}
                       />
                     </div>
-                    
+
                     {/* Tech Description */}
-                    <div className={`mt-2 text-xs text-[#B0B0B0] transition-all duration-300 overflow-hidden ${
-                      hoveredTech === tech.name ? 'max-h-10 opacity-100' : 'max-h-0 opacity-0'
-                    }`}>
+                    <div className={`mt-2 text-xs text-[#B0B0B0] transition-all duration-300 overflow-hidden ${hoveredTech === tech.name ? 'max-h-10 opacity-100' : 'max-h-0 opacity-0'
+                      }`}>
                       {tech.description}
                     </div>
                   </div>
@@ -146,7 +145,7 @@ const TechStack: React.FC = () => {
         {/* Tech Summary Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 animate-on-scroll">
           {[
-            { number: '1,000+', label: 'Active Users Served', symbol: '</>' },
+            { number: '1,000+', label: 'Users Handeled', symbol: '</>' },
             { number: '570', label: 'GSSoC Points Earned', symbol: '{}' },
             { number: '50%', label: 'Bounce Rate Decrease', symbol: '$' },
             { number: '87%', label: 'Organic Traffic Growth', symbol: '↗' }
