@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
 
   const downloadResume = () => {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/1ONQKUObWRo92VCknmgqPM7gBUpNn8qD0/view?usp=sharing';
+    link.href = 'https://drive.google.com/file/d/1i8BSgEj5V9Y68_7UqA1SkLylHqE23GhB/view?usp=sharing';
     link.download = 'Harshwardhan_Singh_Panwar_Resume.pdf';
     document.body.appendChild(link);
     link.click();
